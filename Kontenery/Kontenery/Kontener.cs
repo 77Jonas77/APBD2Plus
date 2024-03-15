@@ -35,4 +35,15 @@ public abstract class Kontener
         }
         this.masaLadunku = masaLadunku;
     }
+
+    public double MasaLadunku => masaLadunku;
+
+    public double WagaWlasna => wagaWlasna;
+
+    public string SerialNumber
+    {
+        get => serialNumber;
+        set => serialNumber = value ?? throw new ArgumentNullException(nameof(value));
+    }
+    //jak zmienic statek? z poziomu kontenera czy statku?
 }
