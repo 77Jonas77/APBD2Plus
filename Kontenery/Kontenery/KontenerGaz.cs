@@ -5,7 +5,7 @@ public class KontenerGaz : Kontener, IHazardNotifier
     private static string Rodzaj = "L";
     private int _cisnienie;
 
-    public KontenerGaz(double masaLadunku, double wysokosc, double wagaWlasna, double glebokosc, string serialNumber, double maxLadownosc, int cisnienie) : base(masaLadunku, wysokosc, wagaWlasna, glebokosc, Rodzaj, maxLadownosc)
+    public KontenerGaz(double masaLadunku, double wysokosc, double wagaWlasna, double glebokosc, double maxLadownosc, int cisnienie) : base(masaLadunku, wysokosc, wagaWlasna, glebokosc, Rodzaj, maxLadownosc)
     {
         _cisnienie = cisnienie;
     }

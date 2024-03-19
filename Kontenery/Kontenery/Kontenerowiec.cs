@@ -65,7 +65,7 @@ public class Kontenerowiec
     //nwm czy o to chodzilo?
     public void ZastapKontener(Kontener kontenerZal, Kontener kontenerDoZaladowania)
     {
-        bool czyz = false;
+        //bool czyz = false;
         _kontenery.Remove(kontenerZal);
         kontenerDoZaladowania.SerialNumber = kontenerDoZaladowania.SerialNumber;
         _kontenery.Add(kontenerDoZaladowania);

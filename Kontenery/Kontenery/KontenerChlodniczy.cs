@@ -9,7 +9,7 @@ public class KontenerChlodniczy : Kontener
     private List<Produkt> _produkty;     //ze typ?       
     private double _temp;
     
-    public KontenerChlodniczy(double masaLadunku, double wysokosc, double wagaWlasna, double glebokosc, string serialNumber, double maxLadownosc, double temp) : base(masaLadunku, wysokosc, wagaWlasna, glebokosc, serialNumber, maxLadownosc)
+    public KontenerChlodniczy(double masaLadunku, double wysokosc, double wagaWlasna, double glebokosc, double maxLadownosc, double temp) : base(masaLadunku, wysokosc, wagaWlasna, glebokosc, Rodzaj, maxLadownosc)
     {
         _temp = temp;
         _produkty = new List<Produkt>();
@@ -20,6 +20,9 @@ public class KontenerChlodniczy : Kontener
         if (_produkty.Count != 0 && produkt.Typ!=_produkty.FirstOrDefault()!.Typ)
         {
             Console.WriteLine("Typ produktu niezgodny z dodanymi juz produktami!");
+        }else if (produkt.Temperature < _temp)
+        {
+            Console.WriteLine("Temperatura w kontenerze wyzsza niz wymaga tego produkt!");
         }
         _produkty.Add(produkt);
         ZaladujKontener(masaLadunku + produkt.Waga);
