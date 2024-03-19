@@ -14,4 +14,9 @@ public class Produkt
         Typ = typ;
         Waga = waga;
     }
+
+    public override string ToString()
+    {
+        return $"{nameof(Name)}: {Name}, {nameof(Typ)}: {Typ}, {nameof(Waga)}: {Waga}, {nameof(Temperature)}: {Temperature}";
+    }
 }

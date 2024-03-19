@@ -45,5 +45,10 @@ public abstract class Kontener
         get => serialNumber;
         set => serialNumber = value ?? throw new ArgumentNullException(nameof(value));
     }
+
+    public override string ToString()
+    {
+        return $"{nameof(masaLadunku)}: {masaLadunku}, {nameof(wysokosc)}: {wysokosc}, {nameof(wagaWlasna)}: {wagaWlasna}, {nameof(glebokosc)}: {glebokosc}, {nameof(serialNumber)}: {serialNumber}, {nameof(maxLadownosc)}: {maxLadownosc}, {nameof(MasaLadunku)}: {MasaLadunku}, {nameof(WagaWlasna)}: {WagaWlasna}, {nameof(SerialNumber)}: {SerialNumber}";
+    }
     //jak zmienic statek? z poziomu kontenera czy statku?
 }

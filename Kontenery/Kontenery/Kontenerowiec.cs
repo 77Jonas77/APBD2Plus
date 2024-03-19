@@ -79,4 +79,10 @@ public class Kontenerowiec
             Console.Write($"{kontener.SerialNumber} ");
         }
     }
+
+    public void PrzeniesKontener(Kontener kontener, Kontenerowiec kontenerowiec)
+    {
+        _kontenery.Remove(kontener);
+        kontenerowiec._kontenery.Add(kontener);
+    } 
 }

@@ -19,5 +19,9 @@ public class KontenerGaz : Kontener, IHazardNotifier
     {
         Console.WriteLine(serialNr  + ": " + wiadomosc);
     }
-    
+
+    public override string ToString()
+    {
+        return $"{nameof(_cisnienie)}: {_cisnienie}";
+    }
 }

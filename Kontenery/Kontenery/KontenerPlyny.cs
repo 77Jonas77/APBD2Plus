@@ -29,4 +29,9 @@ public class KontenerPlyny : Kontener, IHazardNotifier
     {
         Console.WriteLine(serialNr  + ": " + wiadomosc);
     }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()}, {nameof(_niebezpLadunek)}: {_niebezpLadunek}, {nameof(_zwyklyLadunek)}: {_zwyklyLadunek}";
+    }
 }

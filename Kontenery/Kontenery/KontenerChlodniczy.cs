@@ -27,4 +27,9 @@ public class KontenerChlodniczy : Kontener
         _produkty.Add(produkt);
         ZaladujKontener(masaLadunku + produkt.Waga);
     }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()}, {nameof(_produkty)}: {_produkty}, {nameof(_temp)}: {_temp}";
+    }
 }
